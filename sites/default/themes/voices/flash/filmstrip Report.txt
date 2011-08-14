@@ -1,0 +1,45 @@
+filmstrip.swf Movie Report
+---------------------------
+
+Frame #    Frame Bytes    Total Bytes    Scene
+-------    -----------    -----------    ----------------
+      1          19558          19558    Scene 1 (AS 2.0 Classes Export Frame)
+
+Scene                        Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+Scene 1                                0             0                     0
+
+Symbol                       Shape Bytes    Text Bytes    ActionScript Bytes
+-------------------------    -----------    ----------    ------------------
+image 4                                0             0                     0
+w.e.b. dubois                          0             0                     0
+image 3                                0             0                     0
+image 2                                0             0                     0
+image 1                                0             0                     0
+helen keller                           0             0                     0
+howard zinn                            0             0                     0
+sojourner                              0             0                     0
+vanzetti                               0             0                     0
+tecumseh                               0             0                     0
+camilo                                 0             0                     0
+frederick                              0             0                     0
+red cloud                              0             0                     0
+susan b                                0             0                     0
+image 5                                0             0                     0
+
+Bitmap                     Compressed    Compression
+-----------------------    ----------  --------  -----------
+tecumseh.png                    1005       42408   JPEG Quality=60
+vanzetti.png                    1174       42408   JPEG Quality=60
+frederick-douglass.png          1194       46872   JPEG Quality=60
+w.e.b.dubois.png                 924       46872   JPEG Quality=60
+susan-b-anthony.png              791       47616   JPEG Quality=60
+helen-keller.png                 781       47616   JPEG Quality=60
+camilo.png                       793       39804   JPEG Quality=60
+sojourner-truth.png              967       39804   JPEG Quality=60
+red-cloud.png                    857       35340   JPEG Quality=60
+howard-zinn.png                 1034       35340   JPEG Quality=60
+
+
+
+

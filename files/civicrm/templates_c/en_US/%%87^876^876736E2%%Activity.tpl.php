@@ -1,0 +1,91 @@
+<?php /* Smarty version 2.6.14, created on 2010-02-02 11:23:33
+         compiled from CRM/History/Selector/Activity.tpl */ ?>
+<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
+smarty_core_load_plugins(array('plugins' => array(array('function', 'crmURL', 'CRM/History/Selector/Activity.tpl', 6, false),array('function', 'counter', 'CRM/History/Selector/Activity.tpl', 67, false),array('function', 'cycle', 'CRM/History/Selector/Activity.tpl', 70, false),array('block', 'ts', 'CRM/History/Selector/Activity.tpl', 6, false),array('modifier', 'mb_truncate', 'CRM/History/Selector/Activity.tpl', 72, false),array('modifier', 'crmDate', 'CRM/History/Selector/Activity.tpl', 73, false),)), $this); ?>
+<?php if ($this->_tpl_vars['history'] != 1): ?>
+        <?php if ($this->_tpl_vars['totalCountOpenActivity']): ?>
+        <div class="section-shown">
+        <fieldset><legend><a href="<?php echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view','q' => "show=1&action=browse&history=1&selectedChild=activity&cid=".($this->_tpl_vars['contactId'])), $this);?>
+"><img src="<?php echo $this->_tpl_vars['config']->resourceBase; ?>
+i/TreeMinus.gif" class="action-icon" alt="<?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>close section<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>"/></a><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Open Activities<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></legend>
+    <?php else: ?>
+        <div class="section-hidden section-hidden-border">
+        <dl><dt><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Open Activities<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dt>
+        <?php if ($this->_tpl_vars['permission'] == 'edit'): ?>
+            <?php ob_start();  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view/activity','q' => "activity_id=1&action=add&reset=1&cid=".($this->_tpl_vars['contactId'])), $this); $this->_smarty_vars['capture']['default'] = ob_get_contents();  $this->assign('mtgURL', ob_get_contents());ob_end_clean(); ?>
+            <?php ob_start();  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view/activity','q' => "activity_id=2&action=add&reset=1&cid=".($this->_tpl_vars['contactId'])), $this); $this->_smarty_vars['capture']['default'] = ob_get_contents();  $this->assign('callURL', ob_get_contents());ob_end_clean(); ?>
+            <dd><?php $this->_tag_stack[] = array('ts', array('1' => $this->_tpl_vars['mtgURL'],'2' => $this->_tpl_vars['callURL'])); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>No open activities. You can schedule a <a href="%1">meeting</a> or a <a href="%2">call</a>.<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dd>
+        <?php else: ?>
+            <dd><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>There are no open activities for this contact.<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dd>
+        <?php endif; ?>
+        </dl>
+        </div>
+    <?php endif;  else: ?>
+        <div id="openActivities_show" class="section-hidden section-hidden-border">
+        <?php if ($this->_tpl_vars['totalCountOpenActivity']): ?>
+            <a href="<?php echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view','q' => "show=1&action=browse&history=0&selectedChild=activity&cid=".($this->_tpl_vars['contactId'])), $this);?>
+"><img src="<?php echo $this->_tpl_vars['config']->resourceBase; ?>
+i/TreePlus.gif" class="action-icon" alt="<?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>open section<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>"/></a><label><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Open Activities<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></label> (<?php echo $this->_tpl_vars['totalCountOpenActivity']; ?>
+)
+        <?php else: ?>
+            <dl><dt><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Open Activities<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dt>
+            <?php if ($this->_tpl_vars['permission'] == 'edit'): ?>
+                <?php ob_start();  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view/activity','q' => "activity_id=1&action=add&reset=1&cid=".($this->_tpl_vars['contactId'])), $this); $this->_smarty_vars['capture']['default'] = ob_get_contents();  $this->assign('mtgURL', ob_get_contents());ob_end_clean(); ?>
+                <?php ob_start();  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view/activity','q' => "activity_id=2&action=add&reset=1&cid=".($this->_tpl_vars['contactId'])), $this); $this->_smarty_vars['capture']['default'] = ob_get_contents();  $this->assign('callURL', ob_get_contents());ob_end_clean(); ?>
+                <dd><?php $this->_tag_stack[] = array('ts', array('1' => $this->_tpl_vars['mtgURL'],'2' => $this->_tpl_vars['callURL'])); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>No open activities. You can schedule a <a href="%1">meeting</a> or a <a href="%2">call</a>.<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dd>
+            <?php else: ?>
+                <dd><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>There are no open activities for this contact.<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dd>
+            <?php endif; ?>
+            </dl>
+        <?php endif; ?>
+    </div>	
+    <?php if ($this->_tpl_vars['totalCountActivity']): ?>
+        <div class="section-shown">
+        <fieldset><legend><a href="<?php echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view','q' => "show=1&action=browse&history=0&selectedChild=activity&cid=".($this->_tpl_vars['contactId'])), $this);?>
+"><img src="<?php echo $this->_tpl_vars['config']->resourceBase; ?>
+i/TreeMinus.gif" class="action-icon" alt="<?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>close section<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>"/></a><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Activity History<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></legend>
+    <?php else: ?>
+        <div class="section-hidden section-hidden-border">
+            <dl><dt><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Activity History<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dt><dd><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>No activity history for this contact.<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dd></dl>
+        </div>
+    <?php endif;  endif; ?>
+
+<?php if ($this->_tpl_vars['rows']): ?>
+    <form title="activity_pager" action="<?php echo CRM_Utils_System::crmURL(array(), $this);?>
+" method="post">
+
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "CRM/common/pager.tpl", 'smarty_include_vars' => array('location' => 'top')));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+
+    <?php echo '<table><tr class="columnheader">';  $_from = $this->_tpl_vars['columnHeaders']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['header']):
+ echo '<th scope="col">';  if ($this->_tpl_vars['header']['sort']):  echo '';  $this->assign('key', $this->_tpl_vars['header']['sort']);  echo '';  echo $this->_tpl_vars['sort']->_response[$this->_tpl_vars['key']]['link'];  echo '';  else:  echo '';  echo $this->_tpl_vars['header']['name'];  echo '';  endif;  echo '</th>';  endforeach; endif; unset($_from);  echo '</tr>';  echo smarty_function_counter(array('start' => 0,'skip' => 1,'print' => false), $this); echo '';  $_from = $this->_tpl_vars['rows']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }if (count($_from)):
+    foreach ($_from as $this->_tpl_vars['row']):
+ echo '';  if ($this->_tpl_vars['history'] == 1):  echo '<tr class="';  echo smarty_function_cycle(array('values' => "odd-row,even-row"), $this); echo '"><td>';  echo $this->_tpl_vars['row']['activity_type'];  echo '';  if ($this->_tpl_vars['row']['is_test']):  echo '&nbsp;';  $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start();  echo '(test)';  $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack);  echo '';  endif;  echo '</td><td>';  echo ((is_array($_tmp=$this->_tpl_vars['row']['activity_summary'])) ? $this->_run_mod_handler('mb_truncate', true, $_tmp, 33, "...", true) : smarty_modifier_mb_truncate($_tmp, 33, "...", true));  echo '</td><td>';  echo ((is_array($_tmp=$this->_tpl_vars['row']['activity_date'])) ? $this->_run_mod_handler('crmDate', true, $_tmp) : smarty_modifier_crmDate($_tmp));  echo '</td><td>';  echo $this->_tpl_vars['row']['action'];  echo '</td></tr>';  else:  echo '<tr class="';  echo smarty_function_cycle(array('values' => "odd-row,even-row"), $this); echo '"><td>';  echo $this->_tpl_vars['row']['activity_type'];  echo '</td><td><a href="';  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view/activity','q' => "activity_id=".($this->_tpl_vars['row']['activity_type_id'])."&action=view&selectedChild=activity&id=".($this->_tpl_vars['row']['id'])."&cid=".($this->_tpl_vars['contactId'])."&history=0&subType=".($this->_tpl_vars['row']['activity_type_id'])."&context=activity"), $this); echo '">';  echo ((is_array($_tmp=$this->_tpl_vars['row']['subject'])) ? $this->_run_mod_handler('mb_truncate', true, $_tmp, 33, "...", true) : smarty_modifier_mb_truncate($_tmp, 33, "...", true));  echo '</a></td><td>';  if ($this->_tpl_vars['contactId'] != $this->_tpl_vars['row']['sourceID']):  echo '<a href="';  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view','q' => "reset=1&cid=".($this->_tpl_vars['row']['sourceID'])), $this); echo '">';  echo $this->_tpl_vars['row']['sourceName'];  echo '</a>';  else:  echo '';  echo $this->_tpl_vars['row']['sourceName'];  echo '';  endif;  echo '</td><td>';  if ("$".($this->_tpl_vars['contactId']) != $this->_tpl_vars['row']['targetID'] && $this->_tpl_vars['contactId'] == $this->_tpl_vars['row']['sourceID']):  echo '<a href="';  echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view','q' => "reset=1&cid=".($this->_tpl_vars['row']['targetID'])), $this); echo '">';  echo $this->_tpl_vars['row']['targetName'];  echo '</a>';  else:  echo '';  echo $this->_tpl_vars['row']['targetName'];  echo '';  endif;  echo '</td><td>';  echo ((is_array($_tmp=$this->_tpl_vars['row']['date'])) ? $this->_run_mod_handler('crmDate', true, $_tmp) : smarty_modifier_crmDate($_tmp));  echo '</td><td>';  echo $this->_tpl_vars['row']['status_display'];  echo '</td><td>';  echo $this->_tpl_vars['row']['action'];  echo '</td></tr>';  endif;  echo '';  endforeach; endif; unset($_from);  echo '</table>'; ?>
+
+
+    <?php $_smarty_tpl_vars = $this->_tpl_vars;
+$this->_smarty_include(array('smarty_include_tpl_file' => "CRM/common/pager.tpl", 'smarty_include_vars' => array('location' => 'bottom')));
+$this->_tpl_vars = $_smarty_tpl_vars;
+unset($_smarty_tpl_vars);
+ ?>
+    </form>
+    </fieldset>
+    </div>
+<?php endif; ?>
+
+<?php if ($this->_tpl_vars['history'] != 1): ?>
+        <div id="activityHx_show" class="section-hidden section-hidden-border">
+        <?php if ($this->_tpl_vars['totalCountActivity']): ?>
+            <a href="<?php echo CRM_Utils_System::crmURL(array('p' => 'civicrm/contact/view','q' => "show=1&action=browse&history=1&selectedChild=activity&cid=".($this->_tpl_vars['contactId'])), $this);?>
+"><img src="<?php echo $this->_tpl_vars['config']->resourceBase; ?>
+i/TreePlus.gif" class="action-icon" alt="<?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>open section<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?>"/></a><label><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Activity History<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></label> (<?php echo $this->_tpl_vars['totalCountActivity']; ?>
+)
+        <?php else: ?>
+            <dl><dt><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>Activity History<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dt><dd><?php $this->_tag_stack[] = array('ts', array()); $_block_repeat=true;smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], null, $this, $_block_repeat);while ($_block_repeat) { ob_start(); ?>No activity history for this contact.<?php $_block_content = ob_get_contents(); ob_end_clean(); $_block_repeat=false;echo smarty_block_ts($this->_tag_stack[count($this->_tag_stack)-1][1], $_block_content, $this, $_block_repeat); }  array_pop($this->_tag_stack); ?></dd></dl>
+        <?php endif; ?>
+    </div>
+<?php endif; ?>

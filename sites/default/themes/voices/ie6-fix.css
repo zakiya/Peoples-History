@@ -1,0 +1,84 @@
+/* CSS Document */
+#homepage.page #sidebar-right .block-search
+{
+	width:180px;
+	height:100%;
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-0065c5-60.png',sizingMethod='scale');
+}
+#homepage #sidebar-right .block-search #edit-search-block-form-keys
+{
+	width:145px;
+}
+
+
+
+.page #sidebar-right .block-search .container-inline .form-submit
+{
+	width:20px;
+	height:20px;
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/button-search.png',sizingMethod='image');
+}
+#homepage .home-feature
+{
+	position:relative;
+}
+#block-block-10 .blockinner
+{
+	width:390px;
+	height:100%;
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-4098eb-56.png',sizingMethod='scale');
+}
+.page #main .L1block .itemline
+{
+	height:100%;
+}
+.page #main .L1block.news_coverage li
+{
+	list-style-image:url(images/bk-bullets-blue.jpg);
+}
+#homepage.page
+{
+	background-image:none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-homepage.png',sizingMethod='image');
+}
+
+#header .block-menu li span
+{
+	margin:6px 8px;
+}
+#homepage #logo-title span
+{
+	padding:0;
+	margin:0
+}
+.page          #main h1.title{width:100; height:100%;background-image:none;}
+.page.about    #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-about.png',sizingMethod='image');}
+.page.watch    #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-watch.png',sizingMethod='image');}
+.page.organize #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-organize.png',sizingMethod='image');}
+.page.events   #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-events.png',sizingMethod='image');}
+.page.news     #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-news.png',sizingMethod='image');}
+.page.teachers #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-teachers.png',sizingMethod='image');}
+.page.store    #main h1.title{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/sites/default/themes/voices/images/bk-store.png',sizingMethod='image');}
+
+
+.page #block-block-4 li
+{
+	padding:7px 0 5px 12px;
+}
+
+.page #block-block-4 li a
+{
+	display:inline;
+}
+
+.page #sidebar-right
+{
+	margin-top:-63px;
+}
+#header .block-menu
+{
+	width:567px;
+}
